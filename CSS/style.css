@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+.navbar{
+    display: flex;
+    flex-flow: row wrap;
+    height: 130px;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 99; /* Define que o menu fica em uma camada acima dos cards e do carrossel */
+    width: 100%;
+}
+.logo{
+    flex: 10%;
+    margin-left: 0%;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+
+.menu {
+    flex: 70%;
+    /* border: 1px green; */
+    text-align: right;
+    padding: 20px;
+
+}
+.menu a{
+    color: rgb(21, 89, 153);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 16px;
+}
+.menu a:hover {
+    color: #03a3ff;
+    border-top: 4px solid rgb(21, 89, 153);
+}
+#botao{
+    background: rgb(21, 89, 153);
+    padding: 10px 25px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+#botao:hover{
+    border:none;
+    background: #03a3ff;
+}
+/* Até aqui Menu e Logo */
+
+/* imagem trabalhadores */
+.header{
+    width: 100%;
+    display: block;
+    height: auto;
+    padding-top: 130px;
+}
+/* imagem trabalhadores */
+
+/* ==================== COMO PODEMOS AJUDAR ==================== */
+section {
+    display: block;
+    margin-top: 60px;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 2% 2%;
+    text-align: center;
+}
+
+section h2 {
+    width: 100%;
+    font-size: 50px;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: #03a3ff;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+.servicos {
+    display: inline-block;
+    margin-top: 2%;
+    width: 100%;
+}
+
+.card {
+    display: inline-block;
+    width: 30%;
+    min-height: 420px;
+    padding: 45px 25px;
+    margin: 1%;
+    border: 1px solid rgb(41, 192, 230);
+    border-radius: 10px;
+    cursor: pointer;
+    vertical-align: top;
+    position: relative;
+    background: white;
+    overflow: hidden;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    background: #03a3ff;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(3, 163, 255, 0.2);
+}
+
+/* CORRIGIDO: Removida a vírgula incorreta */
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card:hover .card-text {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+/* CORRIGIDO: Removida a vírgula incorreta e consertado o margin-bottom */
+.card img {
+    opacity: 1;
+    visibility: visible;
+    max-width: 80px; 
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card .card-text {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.card:hover .texto-oculto {
+    opacity: 1;
+    visibility: visible;
+}
+
+.texto-oculto {
+    position: absolute;       
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 85%;               
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* ==================== FORMATAÇÃO UNIFICADA DAS FONTES DOS CARDS ==================== */
+
+/* Garante o mesmo tamanho e comportamento para os títulos (h3) */
+.card h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;          /* Deixa todos os títulos exatamente do mesmo tamanho */
+    font-weight: 700;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Faz o título oculto (Mão de Obra) ficar branco no hover */
+.card:hover h3 {
+    color: #ffffff;
+}
+
+/* Garante o mesmo tamanho e espaçamento de linhas para os textos (p) */
+.card p {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;          /* Alinha o tamanho das letras de todas as caixas */
+    color: #333333;           
+    line-height: 1.6;         /* Espaçamento estável entre as linhas para não deformar visualmente */
+    text-align: center;
+    margin: 0;
+}
+
+/* Garante que o texto oculto que aparece fique branco */
+.texto-oculto p {
+    color: #ffffff;
+}
+/* COMO PODEMOS AJUDAR */
+
+/* RODA PÉ */
+footer{
+    margin-top:100px;
+    height: 200px;
+    background-image: linear-gradient(180deg, white,#03a3ff,rgb(8, 8, 54) );
+    text-align: center;
+    border: top 5px solid #03a3ff;
+
+}
+
+.logo-rodape{
+    padding: 50px;
+}
+/* RODA PÉ */
+
+/* WHAS SIMBOLO */
+.whats{
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.whats img {
+    width: 500px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
+    transition: transform 0.2s ease;
+}
+
+.whats img:hover{
+    transform: scale(1.1)
+}
+/* WHAS SIMBOLO */
+
+/* CARROSEL IMAGENS */
+.dia-a-dia {
+    margin-top: 10px;
+    margin-bottom: 80px;
+    text-align: center;
+    width: 100%;
+}
+.dia-a-dia h2 {
+    font-size: 50px;
+    width: 100%;
+    color: #03a3ff;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-family: "Roboto", sans-serif;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    text-align: center;
+}    
+
+.carrossel-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.carrossel-track {
+    display: flex;
+    width: calc((500px + 20px) * 22); /* Tamanho de cada foto (250px) vezes o total de imagens (8) */
+    animation: rolarfotos 40s linear infinite;
+}
+
+.carrossel-track img {
+    width: 500px; /* Largura da foto */
+    height: 600px; /* Altura fixa para ficarem todas iguais */
+    object-fit: cover; /* Corta a imagem proporcionalmente sem distorcer */
+    margin: 0 10px; /* Espaçamento entre as fotos */
+    border-radius: 8px; /* Borda arredondada para combinar com o layout */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dia-a-dia-container:hover .carrossel {
+    animation-play-state: paused;
+}
+
+@keyframes rolarfotos {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(calc(-520px * 11)); /* Move exatamente o tamanho das 4 primeiras fotos (250px + 20px de margem) */
+    }
+}
+/* CARROSEL IMAGENS */
+
+/* Parceiros */
+.logosparc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
+    margin-top: 5%;
+    padding: 0%;
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+}
